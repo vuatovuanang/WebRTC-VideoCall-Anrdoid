@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebRTC Video Call</string>
+
+    <!-- Incoming Call Activity -->
+    <string name="incoming_call">Incoming Call&#8230;</string>
+    <string name="incoming_call_from">Kevin Gleason</string>
+</resources>

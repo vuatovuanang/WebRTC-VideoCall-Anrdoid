@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/friendSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.hiworld.webrtcvideocall.view.activity.VideoCallActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="81dp">
+
+        <ImageView
+            android:id="@+id/btnCamera"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/bg_btn"
+            android:padding="15dp"
+            android:src="@drawable/ic_camera_selector"
+            app:layout_constraintBottom_toTopOf="@+id/btnEndCall"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnVoice" />
+
+        <ImageView
+            android:id="@+id/btnVoice"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_btn"
+            android:padding="15dp"
+            android:src="@drawable/ic_voice_selector"
+            app:layout_constraintLeft_toRightOf="@+id/btnCamera"
+            app:layout_constraintRight_toLeftOf="@+id/btnChangeCam"
+            app:layout_constraintTop_toTopOf="@+id/btnCamera" />
+
+        <ImageView
+            android:id="@+id/btnChangeCam"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_btn"
+            android:padding="15dp"
+            android:src="@drawable/ic_change_cam_selector"
+            app:layout_constraintLeft_toRightOf="@+id/btnVoice"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnVoice" />
+
+        <ImageView
+            android:id="@+id/btnEndCall"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_endcall"
+            android:padding="15dp"
+            android:src="@drawable/ic_call_incoming_cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1" />
+
+        <TextView
+            android:id="@+id/tvFriendName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Friend's Name"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFriendName" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
